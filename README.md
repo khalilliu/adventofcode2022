@@ -1,6 +1,6 @@
 # AdventOfCode2021
 
-C++ Solutions for [adventofcode.com](https://adventofcode.com/) year 2021 puzzles
+C++ Solutions for [adventofcode.com](https://adventofcode.com/) year 2022 puzzles
 
 To compile, this should work for all puzzles (actually, C++20 is only needed for a few, C++11 should be enough for most):
 
