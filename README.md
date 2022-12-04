@@ -1,4 +1,4 @@
-# AdventOfCode2021
+# AdventOfCode2022
 
 C++ Solutions for [adventofcode.com](https://adventofcode.com/) year 2022 puzzles
 
