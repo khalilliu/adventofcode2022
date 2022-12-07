@@ -12,6 +12,8 @@
     "string": "cpp",
     "vector": "cpp",
     "iostream": "cpp",
-    "ostream": "cpp"
+    "ostream": "cpp",
+    "string_view": "cpp",
+    "typeinfo": "cpp"
   }
 }
