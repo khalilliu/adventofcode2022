@@ -38,8 +38,8 @@ int main() {
       snake[0].x += dx[d], snake[0].y += dy[d];
       for(int i=1; i<10; i++) {
         move(snake[i-1], snake[i]);
-        st.insert(snake.back());
       }
+      st.insert(snake.back());
     }
   }
   cout << st.size() << endl;
