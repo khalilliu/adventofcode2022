@@ -7,6 +7,7 @@ using namespace std;
 typedef pair<int, int> PII;
 vector<PII> ops;
 int a[300], b[300];
+
 int main() {
   string s;
   while(getline(cin, s)) {
