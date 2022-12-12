@@ -14,7 +14,7 @@ const int N = 200;
 int dx[4] = {-1, 0, 1, 0}, dy[4] = {0, -1, 0, 1};
 string g[N];
 int dist[N][N];
-bool st[N][N];
+
 PII S, E;
 int n, m;
 
@@ -31,7 +31,7 @@ int main() {
     if(g[i][j] == 'S') S = {i, j}, g[i][j] = 'a';
     if(g[i][j] == 'E') E = {i, j}, g[i][j] = 'z';
   }
-  
+
   dist[S.x][S.y] = 0;
   heap.push({0, S});
 
