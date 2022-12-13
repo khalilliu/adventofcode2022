@@ -14,18 +14,16 @@ function isUndefined(a) {
 
 function dfs(a, b) {
   if(Number.isInteger(a) && Number.isInteger(b)) {  
-    if(a < b) return -1;
-    else if(a == b) return 0;
-    else if(a > b) return 1;
+    return a - b;
+  }
+ 
+  if(isUndefined(a) || isUndefined(b)) {
+    return isUndefined(a) ? (isUndefined(b) ? 0 : -1) : 1
   }
 
-  if(isUndefined(a) && isUndefined(b)) return 0;
-  else if(isUndefined(a)) return -1;
-  else if(isUndefined(b)) return 1;
-  
-  let arr1 = a, arr2 = b;
-  if(!Array.isArray(a)) arr1 = [a]
-  if(!Array.isArray(b)) arr2 = [b]
+
+  let arr1 = Array.isArray(a) ? a : [a] 
+  let arr2 = Array.isArray(b) ? b : [b]
 
   for(let i=0; i<Math.max(arr1.length, arr2.length); i++) {
     let t = dfs(arr1[i], arr2[i])

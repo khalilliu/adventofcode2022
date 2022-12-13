@@ -8,18 +8,22 @@ function readInput(isTest) {
         .map(arr => arr.map(v => JSON.parse(v)))
 }
 
+function isUndefined(a) {
+  return typeof a === 'undefined'
+}
+
 function dfs(a, b) {
   if(Number.isInteger(a) && Number.isInteger(b)) {  
-    if(a < b) return -1;
-    else if(a == b) return 0;
-    else if(a > b) return 1;
+    return a == b ? 0 : (a - b) / Math.abs(a-b);
   }
-  if(typeof a === 'undefined' && typeof b === 'undefined') return 0;
-  else if(typeof a === 'undefined') return -1;
-  else if(typeof b === 'undefined') return 1;
-  let arr1 = a, arr2 = b;
-  if(!Array.isArray(a)) arr1 = [a]
-  if(!Array.isArray(b)) arr2 = [b]
+ 
+  if(isUndefined(a) || isUndefined(b)) {
+    return isUndefined(a) ? (isUndefined(b) ? 0 : -1) : 1
+  }
+
+
+  let arr1 = Array.isArray(a) ? a : [a] 
+  let arr2 = Array.isArray(b) ? b : [b]
 
   for(let i=0; i<Math.max(arr1.length, arr2.length); i++) {
     let t = dfs(arr1[i], arr2[i])
